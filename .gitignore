@@ -1,0 +1,11 @@
+# API Keys - MOST IMPORTANT!
+config.js
+.env
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
