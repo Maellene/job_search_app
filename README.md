@@ -56,10 +56,21 @@ Installing haproxy
   curl -I http://13.221.221.20
 
 # Challenges i faced
-- 
+- I made some changes in my files after i deployed and couldn't see the changes that i made on my website even thought i had pulled but i didn' see the changes.
+
+i learned through my friend that my wbservers are not using my github folder. 
+
+- my web servwers were serving /var/www/html and that folder still contained my old files. 
+   sudo rm -rf /var/www/html
+
+- I had to delete the old website folder and then move my github project into the correct place.
+   sudo cp -r ~/job_search_app /var/www/html
+
+- Restarted th apache everything was working
+   sudo systemctl restart apache2
 
 # Demo video
-youtube link: 
+youtube link: https://youtu.be/zRyqxAq1-6c
 
 
 
@@ -69,19 +80,7 @@ youtube link:
 
 
 
-### Video Contents
-1. **Local Deployment** (0:00-0:30): Demonstration of application running locally with full feature showcase
-2. **Production Deployment** (0:30-1:20): Application accessed via load balancer with functional testing
-3. **Infrastructure Overview** (1:20-1:58): HAProxy statistics and load balancing demonstration
 
-### Demonstrated Features
-- Real-time job search functionality
-- Location-based filtering
-- Job type and date filters
-- Sorting capabilities
-- Direct application links
-- Load balancer statistics
-- High availability setup
 
 
 
